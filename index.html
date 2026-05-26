@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Website Sample — Template for Your Business</title>
+  <meta name="description" content="Cinematic website sample. See how your business could look online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========= CINEMATIC CANVAS BACKGROUND ========= -->
+  <canvas id="gl-canvas"></canvas>
+
+  <!-- ========= LOADER ========= -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-brand">⚡ YOUR COMPANY</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderBar"></div>
+      </div>
+      <div class="loader-info">
+        <span id="loaderPct">0</span>%
+      </div>
+      <div class="loader-caption" id="loaderCaption">Preparing cinematic experience…</div>
+    </div>
+  </div>
+
+  <!-- ========= PROGRESS BAR (thin, bottom) ========= -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- ========= NAVBAR ========= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" id="navBrand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">YOUR COMPANY</span>
+      </a>
+      <div class="nav-links" id="navLinksDesktop">
+        <a href="#services" class="nav-link" data-scroll="1">Services</a>
+        <a href="#process" class="nav-link" data-scroll="2">Process</a>
+        <a href="#results" class="nav-link" data-scroll="3">Results</a>
+        <a href="#packages" class="nav-link" data-scroll="4">Packages</a>
+        <a href="#contact" class="nav-link" data-scroll="5">Contact</a>
+      </div>
+      <a href="tel:#" class="nav-cta">YOUR PHONE</a>
+      <button class="burger" id="navMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========= MOBILE SCRIM + DRAWER ========= -->
+  <div class="nav-scrim" id="navScrim" hidden></div>
+  <div class="nav-drawer" id="navDrawer" hidden>
+    <button class="drawer-close" id="navDrawerClose">✕</button>
+    <a href="#services" class="nav-drawer-link" data-scroll="1">Services</a>
+    <a href="#process" class="nav-drawer-link" data-scroll="2">Process</a>
+    <a href="#results" class="nav-drawer-link" data-scroll="3">Results</a>
+    <a href="#packages" class="nav-drawer-link" data-scroll="4">Packages</a>
+    <a href="#contact" class="nav-drawer-link" data-scroll="5">Contact</a>
+    <a href="tel:#" class="drawer-phone">📞 YOUR PHONE</a>
+  </div>
+
+  <!-- ========= UI LAYER ========= -->
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- ========= HERO ========= -->
+      <section class="page" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <div class="hero-badge reveal-3d">YOUR BRAND • YOUR NICHE • YOUR SPECIALTY</div>
+          <h1 class="hero-title gsap-title reveal-3d">
+            YOUR COMPANY<br><span class="accent-text">NAME HERE</span>
+          </h1>
+          <p class="hero-desc reveal-3d">
+            Here you can write your slogan, a brief description, or a hot offer — anything you like!
+          </p>
+          <div class="hero-actions reveal-3d">
+            <a href="#contact" class="btn btn-primary" data-scroll="5">Custom Button</a>
+            <a href="#services" class="btn btn-outline" data-scroll="1">Your Links</a>
+          </div>
+          <div class="hero-stats reveal-3d">
+            <div class="stat"><span class="stat-num counter" data-target="10">0</span><span class="stat-plus">+</span><span class="stat-label">Years of Experience</span></div>
+            <div class="stat"><span class="stat-num counter" data-target="3000">0</span><span class="stat-plus">+</span><span class="stat-label">Cars Serviced</span></div>
+            <div class="stat"><span class="stat-num counter" data-target="15">0</span><span class="stat-plus">+</span><span class="stat-label">Types of Services</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= SERVICES ========= -->
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Your Services</div>
+          <h2 class="section-title reveal-3d">Your <span class="accent-text">Services</span></h2>
+          <p class="section-desc reveal-3d">From deep polishing to PPF protection — top-tier aesthetics and protection for your vehicle.</p>
+
+          <div class="services-grid">
+            <div class="service-card reveal-3d">
+              <div class="card-icon">💎</div>
+              <h3>Paint Correction</h3>
+              <p>Abrasive and restorative polishing. Scratch, hologram, and swirl removal. Factory-fresh mirror finish.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🛡️</div>
+              <h3>Ceramic Coating</h3>
+              <p>9H+ nano-ceramic coating with up to 5-year warranty. Hydrophobic effect, UV protection, chemical and minor scratch resistance.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🎞️</div>
+              <h3>PPF Film</h3>
+              <p>Polyurethane paint protection film: shields from chips, gravel, and vandalism. An invisible armor for your car.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🧽</div>
+              <h3>Interior deep cleaning</h3>
+              <p>Deep extraction cleaning of leather, fabric, and headliner. Ozone treatment, odor elimination. Interior like new.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🔧</div>
+              <h3>Pre-Sale Prep</h3>
+              <p>Complete vehicle preparation for sale: polishing, deep cleaning, defect removal, ceramic coating.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🪟</div>
+              <h3>Window tinting</h3>
+              <p>Premium films with UV protection. Precision-cut templates, bubble-free guarantee.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PROCESS ========= -->
+      <section class="page" data-index="2" id="process">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Here you can showcase your work</div>
+          <h2 class="section-title reveal-3d">Examples of <span class="accent-text">your work</span></h2>
+          <p class="section-desc reveal-3d">Describe how your collaboration with clients works, as shown in the example below</p>
+
+          <div class="process-grid">
+            <div class="process-step reveal-3d">
+              <div class="step-num">01</div>
+              <h4>Inspection \u0026 Diagnostics</h4>
+              <p>Detailed assessment of paint, interior, and body elements. Paint gauge, inspection light, defect protocol.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">02</div>
+              <h4>Wash \u0026 Decontamination</h4>
+              <p>Touchless wash, clay bar, iron remover, tar removal. Complete surface prep before work.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">03</div>
+              <h4>Correction \u0026 Polishing</h4>
+              <p>2-3 polishing stages: heavy cut → anti-hologram → finish. LED panel inspection.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">04</div>
+              <h4>Protective Coating</h4>
+              <p>Ceramic coating / PPF film application. Laminar booth, temperature control, IR curing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= RESULTS ========= -->
+      <section class="page" data-index="3" id="results">
+        <div class="page-inner">
+          <div class="badge reveal-3d">About Us</div>
+          <h2 class="section-title reveal-3d">About <span class="accent-text">Us</span></h2>
+          <p class="section-desc reveal-3d">Share your achievements at YOUR COMPANY and highlight your best testimonials</p>
+
+          <div class="results-grid">
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="99">0</div>
+              <div class="result-suffix">%</div>
+              <div class="result-label">Clients Return</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="3000">0</div>
+              <div class="result-suffix">+</div>
+              <div class="result-label">Cars Serviced</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="5">0</div>
+              <div class="result-suffix">years</div>
+              <div class="result-label">Ceramic Warranty</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num">24/7</div>
+              <div class="result-label">Online Booking</div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal-3d">
+            <blockquote>
+              "YOUR COMPANY helped us bring our dream project to life. The process was transparent — we saw every step. The result exceeded all expectations."
+            </blockquote>
+            <div class="testimonial-author">
+              <span class="t-name">John D.</span>
+              <span class="t-role">Client «LLC StarPath"</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PACKAGES ========= -->
+      <section class="page" data-index="4" id="packages">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Special Offers</div>
+          <h2 class="section-title reveal-3d">Current <span class="accent-text">promotions \u0026 programs</span></h2>
+          <p class="section-desc reveal-3d">Choose a package or build a custom program — we'll find the best solution.</p>
+
+          <div class="packages-grid">
+            <div class="package-card reveal-3d">
+              <div class="package-tag">Basic</div>
+              <h3>CLEAN</h3>
+              <div class="package-price">from $250</div>
+              <ul>
+                <li>Touchless wash</li>
+                <li>Wheel \u0026 fender cleaning</li>
+                <li>Interior deep cleaning</li>
+                <li>Leather conditioning</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-sm" data-scroll="5">Custom Button</a>
+            </div>
+            <div class="package-card package-featured reveal-3d">
+              <div class="package-tag">Popular</div>
+              <h3>CERAMIC PRO</h3>
+              <div class="package-price">from $800</div>
+              <ul>
+                <li>2-stage polishing</li>
+                <li>9H+ ceramic (3 coats)</li>
+                <li>Interior deep cleaning</li>
+                <li>Glass hydrophobic coating</li>
+                <li>3-year warranty</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm" data-scroll="5">Custom Button</a>
+            </div>
+            <div class="package-card reveal-3d">
+              <div class="package-tag">Maximum</div>
+              <h3>FULL ARMOR</h3>
+              <div class="package-price">from $2,500</div>
+              <ul>
+                <li>Full body PPF wrap</li>
+                <li>Ceramic over PPF</li>
+                <li>Polishing + deep clean</li>
+                <li>Window tinting</li>
+                <li>5-year warranty</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-sm" data-scroll="5">Custom Button</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= CONTACT ========= -->
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Contact</div>
+          <h2 class="section-title reveal-3d">Let's start <span class="accent-text">working together</span></h2>
+          <p class="section-desc reveal-3d">Add your contacts, address, and social media so clients can reach you</p>
+
+          <div class="contact-grid">
+            <form class="contact-form reveal-3d" id="contactForm" onsubmit="return false;">
+              <input type="text" id="formName" placeholder="Your name" required>
+              <input type="tel" id="formPhone" placeholder="Phone / WhatsApp" required>
+              <select id="formService">
+                <option value="">Your industry</option><option>Healthcare / Beauty</option><option>Restaurants / HoReCa</option><option>Construction / Remodeling</option><option>Architecture / Design</option><option>IT / Consulting</option><option>Auto Business / Detailing</option><option>Fitness / Sports</option><option>Education</option><option>Tourism / Hotels</option><option>Manufacturing</option><option>Other</option>
+              </select>              <button type="submit" class="btn btn-primary" id="submitBtn">
+                <span id="submitText">Order Website →</span>
+              </button>
+            </form>
+
+            <div class="contact-info reveal-3d">
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <p>YOUR Address</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:#">YOUR PHONE</a></p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">💬</span>
+                <div>
+                  <strong>Messengers</strong>
+                  <div class="social-links">
+                    <a href="#" class="social-btn">WhatsApp</a>
+                    <a href="#" class="social-btn">Telegram</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                  </div>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">🕐</span>
+                <div>
+                  <strong>Business Hours</strong>
+                  <p>Mon–Sat: 9:00 AM – 8:00 PM</p>
+                  <p>Sun: By appointment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:32px"><a href="https://unityspirit.github.io/global-plus-en/#page-4" class="btn btn-outline" style="font-size:16px;padding:14px 40px">BACK TO MAIN PAGE</a></div>`n      <footer class="footer">
+          <p>© 2026 YOUR COMPANY</p>
+        </footer>
+      </section>
+
+    </div><!-- /.stage -->
+  </div><!-- /#ui-layer -->
+
+  <!-- ========= CURSOR GLOW ========= -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
