@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="gd2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A94B"/>
+      <stop offset="100%" stop-color="#b8912f"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#1a1a2e"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#gd2)" stroke-width="2"/>
+  <!-- Car front view - sleek modern -->
+  <path d="M55,110 L60,90 Q70,75 100,75 Q130,75 140,90 L145,110" fill="none" stroke="url(#gd2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Windshield -->
+  <path d="M68,95 Q80,82 100,82 Q120,82 132,95" fill="none" stroke="url(#gd2)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Body bottom -->
+  <path d="M45,110 L155,110 L155,125 Q155,130 150,130 L50,130 Q45,130 45,125 Z" fill="none" stroke="url(#gd2)" stroke-width="2.5"/>
+  <!-- Headlights -->
+  <ellipse cx="60" cy="110" rx="8" ry="5" fill="url(#gd2)"/>
+  <ellipse cx="140" cy="110" rx="8" ry="5" fill="url(#gd2)"/>
+  <!-- Grille -->
+  <line x1="85" y1="115" x2="115" y2="115" stroke="url(#gd2)" stroke-width="1.5"/>
+  <line x1="85" y1="120" x2="115" y2="120" stroke="url(#gd2)" stroke-width="1.5"/>
+  <!-- Water drops / polish effect -->
+  <circle cx="75" cy="55" r="3" fill="url(#gd2)" opacity="0.6"/>
+  <circle cx="100" cy="50" r="4" fill="url(#gd2)" opacity="0.7"/>
+  <circle cx="125" cy="55" r="3" fill="url(#gd2)" opacity="0.6"/>
+  <!-- Shine rays -->
+  <line x1="100" y1="42" x2="100" y2="35" stroke="url(#gd2)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="85" y1="46" x2="80" y2="40" stroke="url(#gd2)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="115" y1="46" x2="120" y2="40" stroke="url(#gd2)" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
